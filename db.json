@@ -1,0 +1,6 @@
+{
+  "content": [
+    { "id": 1, "title": "First Post", "author": "Admin" },
+    { "id": 2, "title": "Second Post", "author": "User" }
+  ]
+}
