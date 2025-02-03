@@ -1,6 +1,24 @@
 {
   "content": [
-    { "id": 1, "title": "First Post", "author": "Admin" },
-    { "id": 2, "title": "Second Post", "author": "User" }
+    {
+      "id": 1,
+      "title": "First Post",
+      "author": "Admin"
+    },
+    {
+      "id": 2,
+      "title": "Second Post",
+      "author": "User"
+    },
+    {
+      "id": "30b5",
+      "title": "New Post Title",
+      "author": "Wudi"
+    },
+    {
+      "id": "6aae",
+      "title": "Hi",
+      "author": "Wu"
+    }
   ]
 }
