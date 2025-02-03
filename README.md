@@ -1,59 +1,49 @@
-# AngularTypescriptPlayground
+Files Structure
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.4.
+/app
+ ├── /core            # 核心模組 (單例服務、認證、守衛)
+ │   ├── /services    # API、WebSocket、日誌、身份驗證
+ │   │   ├── auth.service.ts
+ │   ├── /guards      # 路由守衛 (RBAC 權限控制)
+ │   │   ├── auth.guard.ts
+ │   ├── /interceptors # HTTP 攔截器 (API Token、錯誤處理)
+ │   │   ├── token.interceptor.ts
+ │   │   ├── error.interceptor.ts
+ │   ├── core.module.ts
+ │
+ ├── /shared          # 共用模組 (共用元件、指令、管道)
+ │   ├── /components  # UI 元件 (Modal、Chart、Loading)
+ │   │   ├── button/
+ │   │   ├── modal/
+ │   │   ├── chart/
+ │   │   ├── loading-spinner/
+ │   ├── /directives  # 自訂指令 (Lazy Load、Autofocus)
+ │   ├── /pipes       # 自訂管道 (AI 資料格式化)
+ │   ├── /models      # TypeScript 介面 (AI 輸入/輸出)
+ │   ├── shared.module.ts
+ │
+ ├── /layout          # 全局佈局 (側邊欄、頂部導航等)
+ │   ├── sidebar/
+ │   ├── topbar/
+ │   ├── layout.component.ts
+ │   ├── layout.component.html
+ │   ├── layout.module.ts
+ │
+ ├── /features        # 主要功能模組 (獨立載入)
+ │
+ ├── /pages           # 主要頁面 (路由對應的頁面)
+ │   ├── home/
+ │   ├── dashboard/
+ │   ├── profile/
+ │   ├── login/
+ │
+ ├── /services        # 全域服務 (API 請求、資料管理)
+ │   ├── content.service.ts
+ │
+ ├── app.component.ts
+ ├── app.module.ts
+ ├── app-routing.module.ts
+ ├── main.ts
+ ├── index.html
+ ├── styles.scss
 
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
